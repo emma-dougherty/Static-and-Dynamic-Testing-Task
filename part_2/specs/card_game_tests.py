@@ -9,20 +9,23 @@ class TestCardGame(unittest.TestCase):
         self.card2 = Card("hearts", 7)
         self.card3 = Card("diamonds", 3)
         self.cards = [self.card1, self.card2, self.card3]
-        
-    
+
+
+    @unittest.skip("delete this line to run the test")
     def test_check_for_ace(self):
         result = CardGame.check_for_ace(self, self.card1)
         self.assertEqual(True, result)
-
+    
+    @unittest.skip("delete this line to run the test")
     def test_check_not_ace(self):
         result = CardGame.check_for_ace(self, self.card2)
         self.assertEqual(False, result)
-
+    
+    @unittest.skip("delete this line to run the test")
     def test_check_highest_card(self):
         result = CardGame.highest_card(self, self.card1, self.card2)
         self.assertEqual(self.card2, result)
-
+    
     def test_cards_total(self):
         result = CardGame.cards_total(self, self.cards)
         self.assertEqual("You have a total of 11", result)
